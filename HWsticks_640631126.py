@@ -95,3 +95,18 @@ def main():
              break 
 
 main()
+
+"""
+How the computer (Python) should think?
+    Ans. max taken is 2 so n = 2 -> (sticks + 2)%3 != 0 and the reminder will be the number of python taken.
+         [(sticks + n)%(n+1) ; n is maximun number of stick taken.]
+
+Is it true that: If the computer (Python) does the first move, she will always win.
+    Ans. Yes, she will always win if (sticks + 2)%3 not equal to 0.
+
+What if the number of sticks change to any number, will AI the strategy change?
+    Ans. It doesn't have to change strategy if want to change the number of sticks, 
+         unless you want to change min or max number of stick taken.
+         example take 1 or 3 then n = 3 magic number is 3 + 1 = 4 so change (sticks + 2)%3 to (sticks + 3)%4
+
+"""
