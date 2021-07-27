@@ -29,9 +29,8 @@ def main():
   print("Player1 : Python" ,"\n" "Player2 : " + str(name),"\n")
   sticks = int(input("How many sticks in the pile: "))
   print("There are", sticks, "sticks in the pile.")
-  
-  if (sticks + 2)%3 != 0 :
-     while True:
+    
+  while True:
          if sticks > 1 :  
               print("Turn: Player", player_turn)
               if player_turn == 1:
@@ -60,39 +59,7 @@ def main():
                      continue
                  print(str(name) + ", takes the last stick.", "\n")
                  print("I, smart computer, wins! >-<")             
-             break        
-         
-  else :
-     while True:
-         if sticks > 1 :  
-              print("Turn: Player", player_turn)
-              if player_turn == 1:
-                  take_stick = p1take(sticks)
-              if player_turn == 2:  
-                  take_stick = int(input(str(name) + ", How many sticks do you want to take? (1 or 2): "))
-              if take_stick < 1 or take_stick > 2:
-                  print("Sorry, that's not a valid number.")
-                  continue
-              sticks -= take_stick 
-              print("There are", sticks, "sticks in the pile.")
-              player_turn += 1
-              if player_turn == 3:
-                  player_turn -= 2
-                  
-         if sticks <= 1:
-             print("Turn: Player", player_turn)
-             if player_turn == 1:
-                 take_stick = 1
-                 print("I, smart computer, takes the last stick.", "\n")
-                 print(str(name) + ", wins! (I, smart computer, am sad ;---;)") 
-             if player_turn == 2:     
-                 take_stick = int(input(str(name) + ", How many sticks do you want to take? (1 or 2): "))       
-                 if take_stick < 1 or take_stick > 1:
-                     print("Sorry, that's not a valid number.", "\n")
-                     continue
-                 print(str(name) + ", takes the last stick.", "\n")
-                 print("I, smart computer, wins! >-<")             
-             break 
+             break             
 
 main()
 
