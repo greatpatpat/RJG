@@ -12,9 +12,7 @@ from typing import List
 class ANS:
 
     def largestNumber(self, nums: List[int]) -> str:
-        if not any(map(bool, nums)):
-            return '0'
-        
+    
         nums = list(map(str, nums))
         if len(nums) < 2:
             return "".join(nums)
